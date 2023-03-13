@@ -23,7 +23,7 @@ const About = () => {
           <li className="technology">MySQL</li>
         </ul>
       </div>
-      <img className="my-image" src="/images/me.jpeg" />
+      <img className="my-image" src="/images/Me.jpeg" />
     </div>
   );
 };
