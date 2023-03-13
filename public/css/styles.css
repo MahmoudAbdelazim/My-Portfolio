@@ -109,6 +109,35 @@ ul.right {
   color: rgba(204, 235, 255, 0.697);
 }
 
+.get-in-touch-button {
+  background-color: transparent;
+  padding: 10px 40px;
+  margin-top: 20px;
+  border-color: #64ffda;
+  margin-right: 20px;
+}
+
+.get-in-touch-button:hover,
+.get-in-touch-button:active,
+.get-in-touch-button:focus {
+  background-color: #64ffdb91 !important;
+  border-color: #64ffdb91 !important;
+}
+
+.resume-button {
+  background-color: #64ffdb5b;
+  padding: 10px 40px;
+  margin-top: 20px;
+  border-color: #64ffdb5b;
+}
+
+.resume-button:hover,
+.resume-button:active,
+.resume-button:focus {
+  background-color: #64ffdb91 !important;
+  border-color: #64ffdb91 !important;
+}
+
 /* ------------------------------------------------------------ */
 
 .about {
@@ -270,9 +299,6 @@ ul.right {
   padding: 0 20%;
 }
 
-.social {
-}
-
 .social li {
   display: inline-block;
   margin: 50px 50px;
@@ -285,7 +311,7 @@ ul.right {
 }
 
 .social-logo:hover {
-  color: rgb(117, 171, 246);
+  color: #64ffdb;
   transition: 0.2s;
 }
 
@@ -365,6 +391,10 @@ ul.right {
   .contact p {
     padding: 0 10%;
   }
+
+  .social li {
+    margin: 20px 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -379,5 +409,9 @@ ul.right {
   }
   .contact p {
     padding: 0 5%;
+  }
+
+  .social li {
+    margin: 7px 7px;
   }
 }
