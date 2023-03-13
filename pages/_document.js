@@ -23,6 +23,7 @@ class MyDocument extends Document {
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
           />
+          <link rel="icon" type="image/x-icon" href="/images/favicon.jpg" />
         </Head>
         <body>
           <Main />
