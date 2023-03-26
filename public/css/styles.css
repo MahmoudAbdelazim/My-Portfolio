@@ -98,11 +98,13 @@ ul.right {
   padding-right: 40px !important;
 }
 
+/* ----------------------------------------------------------------------- */
+
 .landing {
   text-align: left;
   padding: 0 20%;
   padding-top: 150px;
-  height: 100vh;
+  padding-bottom: 170px;
 }
 
 .landing-p {
@@ -434,8 +436,13 @@ ul.right {
     font-size: 200%;
   }
   .landing {
-    padding-top: 150px;
+    padding-top: 80px;
     text-align: center;
+  }
+
+  .get-in-touch-button {
+    display: inline-block;
+    margin-right: 10px;
   }
 
   .my-image {
