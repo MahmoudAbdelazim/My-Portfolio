@@ -1,3 +1,4 @@
+
 const FeaturedProjectImage = ({project}) => {
   return (
     <div className="featured-project-image">

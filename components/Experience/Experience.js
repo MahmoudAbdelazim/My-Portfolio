@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Work from "./Work";
+import Work from "../Work/Work";
 
 const Experience = () => {
   const [experience, setExperience] = useState([]);

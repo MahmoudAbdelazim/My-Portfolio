@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import FeaturedProject from "./FeaturedProject";
+import FeaturedProject from "../FeaturedProject/FeaturedProject";
 
 const FeaturedProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
   return (
     <div className="featured-projects" id="projects">
       <h2 className="section-head">Featued Projects</h2>
-      <p>
+      <p className="section-desc">
         These are the most interesting projects I've worked on.<br/> you can
         find their details and their code using the GitHub link below each one
       </p>
