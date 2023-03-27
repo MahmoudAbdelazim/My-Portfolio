@@ -4,20 +4,19 @@ import Experience from "../components/Experience/Experience";
 import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Landing from "../components/Landing/Landing";
 import Nav from "../components/Nav/Nav";
-import Section from "../components/Section/Section";
 
 const IndexPage = () => {
   return (
     <>
       <Nav />
       <Landing />
-      <Section><About /></Section>
+      <About />
       <hr className="section-line" />
-      <Section><Experience /></Section>
+      <Experience />
       <hr className="section-line" />
-      <Section><FeaturedProjects /></Section>
+      <FeaturedProjects />
       <hr className="section-line" />
-      <Section><Contact /></Section>
+      <Contact />
       <div className="footer">&copy; Built By Mahmoud Abdelazim</div>
     </>
   );

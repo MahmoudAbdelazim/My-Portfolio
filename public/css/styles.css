@@ -343,6 +343,50 @@ ul.right {
   transition: 0.2s;
 }
 
+/* -------------------------------------------------------------------------- */
+.projects {
+  margin-top: 80px;
+  padding: 0 20%;
+}
+
+.section-desc {
+  margin-bottom: 50px;
+}
+
+.project {
+  text-align: left;
+  margin: auto;
+  background-color: rgb(1, 32, 65);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: 0.2s;
+}
+
+.project-topic {
+  display: inline-block;
+  color: #64ffdb;
+  margin-right: 10px;
+  border: 1px solid #64ffdb4e;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.language {
+  color: #64ffdb;
+}
+
+.project-link, .project-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project:hover {
+  background-color: rgb(1, 21, 44);
+  transition: 0.2s;
+}
+
 /* ------------------------------------------------------------------ */
 
 .footer {
@@ -381,13 +425,24 @@ ul.right {
   .about,
   .experience,
   .featured-projects,
-  .contact {
+  .contact,
+  .projects {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
+  nav {
+    text-align: right;
+  }
+
+  .nav-toggler {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
   .about-right {
     flex: 100%;
   }
@@ -462,4 +517,8 @@ ul.right {
     flex-direction: column;
     margin-bottom: -100px;
   }
+
+  .section-desc {
+    text-align: center;
+  } 
 }
