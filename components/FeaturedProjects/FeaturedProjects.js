@@ -26,7 +26,7 @@ const FeaturedProjects = () => {
         githubLink: "https://github.com/MahmoudAbdelazim/Star-Match-Game/",
         imageLink: "/images/projects/star-match-game.png",
         technologies: ["JavaScript, React"],
-      }
+      },
     ];
     setProjects(proj);
   }, []);
@@ -35,14 +35,20 @@ const FeaturedProjects = () => {
     <div className="featured-projects" id="projects">
       <h2 className="section-head">Featued Projects</h2>
       <p className="section-desc">
-        These are the most interesting projects I've worked on.<br/> you can
-        find their details and their code using the GitHub link below each one
+        These are the most interesting projects I've worked on.
+        <br /> you can find their details and their code using the GitHub link
+        below each one
       </p>
       {projects.map((project, idx) => {
         if (idx % 2 == 0)
           return <FeaturedProject project={project} left={false} />;
         else return <FeaturedProject project={project} left={true} />;
       })}
+      <div className="projects-button-container">
+        <a href="/projects" className="btn btn-primary projects-button">
+          View All Projects
+        </a>
+      </div>
     </div>
   );
 };

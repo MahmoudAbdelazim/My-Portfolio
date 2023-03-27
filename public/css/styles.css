@@ -123,7 +123,7 @@ ul.right {
   color: rgba(204, 235, 255, 0.697);
 }
 
-.get-in-touch-button {
+.get-in-touch-button, .projects-button, .go-back-button {
   background-color: transparent;
   padding: 10px 40px;
   margin-top: 20px;
@@ -133,7 +133,13 @@ ul.right {
 
 .get-in-touch-button:hover,
 .get-in-touch-button:active,
-.get-in-touch-button:focus {
+.get-in-touch-button:focus,
+.projects-button:hover,
+.projects-button:active,
+.projects-button:focus,
+.go-back-button:hover,
+.go-back-button:active,
+.go-back-button:focus {
   background-color: #64ffdb91 !important;
   border-color: #64ffdb91 !important;
 }
@@ -308,6 +314,10 @@ ul.right {
   width: 25px;
 }
 
+.projects-button-container {
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------ */
 
 .contact {
@@ -385,6 +395,14 @@ ul.right {
 .project:hover {
   background-color: rgb(1, 21, 44);
   transition: 0.2s;
+}
+
+.go-back-button {
+  margin-bottom: 40px;
+}
+
+.loading-gif {
+  width: 50px;
 }
 
 /* ------------------------------------------------------------------ */
