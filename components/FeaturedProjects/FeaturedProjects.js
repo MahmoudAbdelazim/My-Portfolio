@@ -14,18 +14,18 @@ const FeaturedProjects = () => {
         technologies: ["Java, Spring, Python, SKLearn, Angular, MySQL"],
       },
       {
+        name: "Blog Website",
+        desc: "A simple blog website built in Spring Boot and React that allows users to write posts, like posts, comment on posts and search through posts using tags.",
+        githubLink: "https://github.com/MahmoudAbdelazim/Blog-Website/",
+        imageLink: "/images/projects/blog-website.png",
+        technologies: ["Java, Spring, JavaScript, React, Next, Material UI"],
+      },
+      {
         name: "Text Editor",
         desc: "A Text Editor project built as a GUI application in Java Swing Framework, it allows for editing files, saving files, searching in files whether using simple text or with Regular Expressions. It's one of JetBrains Academy's Challenging Level projects.",
         githubLink: "https://github.com/MahmoudAbdelazim/Text-Editor/",
         imageLink: "/images/projects/text-editor.png",
         technologies: ["Java, Swing Framework, Regex"],
-      },
-      {
-        name: "Star Match Game",
-        desc: "A star match math game for kids built as a practice for the React getting started course by JSComplete on Pluralsight.",
-        githubLink: "https://github.com/MahmoudAbdelazim/Star-Match-Game/",
-        imageLink: "/images/projects/star-match-game.png",
-        technologies: ["JavaScript, React"],
       },
     ];
     setProjects(proj);
