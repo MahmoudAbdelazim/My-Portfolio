@@ -194,8 +194,8 @@ ul.right {
 
 .technology-logo {
   color: #64ffda;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 30px;
   background-color: rgb(0, 35, 72);
   border-radius: 100%;
@@ -260,7 +260,7 @@ ul.right {
   width: 100%;
   height: 250px;
   border-radius: 2%;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: 0.2s;
 }
 
@@ -526,6 +526,7 @@ ul.right {
   }
   .featured-project-image img {
     height: 170px;
+    opacity: 1.0;
   }
   .contact p {
     padding: 0 5%;

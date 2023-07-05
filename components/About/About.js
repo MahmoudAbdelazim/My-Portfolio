@@ -3,6 +3,7 @@ import {
   faJs,
   faPython,
   faReact,
+  faNode
 } from "@fortawesome/free-brands-svg-icons";
 import { faC, faCode, faDatabase } from "@fortawesome/free-solid-svg-icons";
 import TechologyIcon from "../TechnologyIcon/TechnologyIcon";
@@ -12,7 +13,7 @@ const About = () => {
     <div className="about js-reveal" id="about">
       <h2 className="section-head">About Me</h2>
       <div className="flex-container">
-        <div className="my-image-container"><img className="my-image" src="/images/Me 2.png" /></div>
+        <div className="my-image-container"><img className="my-image" src="/images/Me 3.png" /></div>
         <div className="about-right">
           <p className="about-text" style={{ whiteSpace: "pre-line" }}>
             Hi! My name is Mahmoud Abdelazim, I'm a junior software engineer and
@@ -30,10 +31,10 @@ const About = () => {
         <TechologyIcon icon={faJava} label={"Java"} />
         <TechologyIcon icon={faJs} label={"JavaScript"} />
         <TechologyIcon icon={faC} label={"C++"} />
-        <TechologyIcon icon={faPython} label={"Python"} />
         <TechologyIcon icon={faCode} label={"Spring Framework"} />
         <TechologyIcon icon={faReact} label={"React.js"} />
-        <TechologyIcon icon={faDatabase} label={"MySQL"} />
+        <TechologyIcon icon={faNode} label={"Node.js"} />
+        <TechologyIcon icon={faDatabase} label={"SQL"} />
       </div>
     </div>
   );

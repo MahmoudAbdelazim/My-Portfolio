@@ -14,19 +14,19 @@ const FeaturedProjects = () => {
         technologies: ["Java, Spring, Python, SKLearn, Angular, MySQL"],
       },
       {
+        name: "Level Coder",
+        desc: "a full-stack website that contains a collection of problem solving learning resources in Arabic and English, with problems to practice every topic on CodeForces, LeetCode and HackerRank.",
+        githubLink: "https://github.com/MahmoudAbdelazim/Level-Coder-Frontend",
+        imageLink: "/images/projects/level-coder.png",
+        technologies: ["JavaScript, Node.js, Express.js, PostgreSQL, Sequelize, React.js, Next.js"],
+      },
+      {
         name: "Blog Website",
         desc: "A simple blog website built in Spring Boot and React that allows users to write posts, like posts, comment on posts and search through posts using tags.",
         githubLink: "https://github.com/MahmoudAbdelazim/Blog-Website/",
         imageLink: "/images/projects/blog-website.png",
         technologies: ["Java, Spring, JavaScript, React, Next, Material UI"],
-      },
-      {
-        name: "Text Editor",
-        desc: "A Text Editor project built as a GUI application in Java Swing Framework, it allows for editing files, saving files, searching in files whether using simple text or with Regular Expressions. It's one of JetBrains Academy's Challenging Level projects.",
-        githubLink: "https://github.com/MahmoudAbdelazim/Text-Editor/",
-        imageLink: "/images/projects/text-editor.png",
-        technologies: ["Java, Swing Framework, Regex"],
-      },
+      }, 
     ];
     setProjects(proj);
   }, []);
