@@ -7,22 +7,45 @@ const Experience = () => {
   useEffect(() => {
     let exp = [
       {
-        companyName: "Egyptian Military",
+        companyName: "Siemens Digital Industries Software",
+        companyLink: "https://www.sw.siemens.com/en-US/",
+        title: "Software Development Engineer",
+        dateFrom: "Jun 2024",
+        dateTo: "Present",
+        responsibilities: [
+          "Working as a full-stack engineer for Brightly Software team at Siemens Digital Industries Software. ",
+        ],
+      },
+      {
+        companyName: "Wind Integrated Solutions",
+        companyLink: "https://wind-is.com/",
+        title: "Software Engineer",
+        dateFrom: "Jan 2024",
+        dateTo: "May 2024",
+        duration: "5 Months",
+        responsibilities: [
+          "Developed a request-approval process cycle for El-Nahdi organization (Saudi Arabian client), including creating Oracle SQL database schema, building RESTful APIs using ORDS, front-end pages using Visual Builder Studio, and process management using Oracle Process Cloud Service Integration.",
+          "Contributed in development of an auto-initiated process cycle that is automatically scheduled to start at a specific time of the day and automatically expires and terminates if no action was performed. ",
+        ],
+      },
+      {
+        companyName: "Military Judiciary Authority",
         companyLink: null,
         title: "Mandatory Military Service",
         dateFrom: "Jan 2023",
-        dateTo: "Feb 2024",
-        duration: "Present",
+        dateTo: "Jan 2024",
+        duration: "1 Year",
         responsibilities: [
-          "Currently doing my mandatory one-year Egyptian military service week-on, week-off, which will end by February 2024.",
-          "Building a complete system from scratch for handling security gates check-in and check-out for the military judiciary authority by extracting visitors' info from their scanned national IDs, using Tesseract engine, Flask, Node.JS and React.",
-          "Contributed to the development and maintenance of a faxes system for the military judiciary authority using Django and vanilla JavaScript that allows for an automated handling of faxes between different departments in the authority.",
+          "Worked on three technical projects during my one-year mandatory military service at the military judiciary authority:",
+          "Developed a web application from scratch for handling security gates check-in by extracting visitors' information from their scanned national IDs (OCR) and authorizing their check-ins. Used Node.js, React.js, Tesseract Engine, Flask and Sequelize.",
+          "Contributed to development of a digital investigation system that allows case-tracking, questions-answers registering and automated report generation. Used Node.js, React.js and Sequelize.",
+          "Contributed to development and maintenance of a web app for handling faxes distribution, and archiving and sending documents across different departments in the authority. Used Python, Django, JavaScript, and SQLite. "
         ],
       },
       {
         companyName: "IBM",
         companyLink: "https://www.ibm.com",
-        title: "Application Developer Intern",
+        title: "Software Developer Intern",
         dateFrom: "Jun 2022",
         dateTo: "Dec 2022",
         duration: "5 Months",
@@ -31,7 +54,7 @@ const Experience = () => {
           "Worked as a BPM Developer in a governmental project for the administrative prosecution in Egypt.",
           "Worked with BPM Cloud Pak, JavaScript, and IBM DB2.",
           "worked as a back-end developer during IBM summer training using Node.js for an intelligent city project with the name of IBM Intelligent City.",
-          "Engaged in daily meetings to assess my work and get feedback from my leads."
+          "Engaged in daily meetings to assess my work and get feedback from my leads.",
         ],
       },
       {
@@ -46,8 +69,8 @@ const Experience = () => {
           "Worked on a text document-level domain classification model, a model that classifies text documents to their appropriate domains to add the domain as a feature for the machine translation model.",
           "First created the model from scratch using PyTorch and then fine-tuned pre-trained models (Google’s BERT and XLNet).",
           "Developed a web application exposing the model using Flask for evaluating the model.",
-          "Did a final presentation for what I have accomplished and learned during my internship."
-        ]
+          "Did a final presentation for what I have accomplished and learned during my internship.",
+        ],
       },
     ];
     setExperience(exp);
@@ -56,8 +79,8 @@ const Experience = () => {
   return (
     <div className="experience" id="experience">
       <h2 className="section-head">Where I've Worked</h2>
-      {experience.map((exp) => {
-        return <Work exp={exp} />;
+      {experience.map((exp, idx) => {
+        return <Work key={idx} exp={exp} />;
       })}
     </div>
   );

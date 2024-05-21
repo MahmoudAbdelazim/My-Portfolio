@@ -19,11 +19,11 @@ const FeaturedProjects = () => {
       {
         name: "El Mazraa",
         desc: " An online marketplace designed specifically for farmers and agricultural enthusiasts, providing a platform for buying, selling, and marketing agricultural products, machines, crops, and other related goods in an OLX-style format",
-        website: "https://mazraa-fv3c9.ondigitalocean.app",
+        githubLink: "https://github.com/MahmoudAbdelazim/Mazraa-Backend",
         imageLink: "/images/projects/mazraa.png",
         technologies: [
           "JavaScript, Node.js, Express.js, PostgreSQL, Sequelize, React.js, Next.js",
-        ]
+        ],
       },
       {
         name: "Party Up",
@@ -37,8 +37,10 @@ const FeaturedProjects = () => {
         desc: "A simple blog website built in Spring Boot and React that allows users to write posts, like posts, comment on posts and search through posts using tags.",
         githubLink: "https://github.com/MahmoudAbdelazim/Blog-Website/",
         imageLink: "/images/projects/blog-website.png",
-        technologies: ["Java, Spring, JavaScript, React.js, Next.js, Material UI"],
-      },     
+        technologies: [
+          "Java, Spring, JavaScript, React.js, Next.js, Material UI",
+        ],
+      },
     ];
     setProjects(proj);
   }, []);
@@ -47,14 +49,14 @@ const FeaturedProjects = () => {
     <div className="featured-projects" id="projects">
       <h2 className="section-head">Featued Projects</h2>
       <p className="section-desc">
-        These are the most interesting projects I've worked on.
+        These are the most interesting side projects I've worked on.
         <br /> you can find their details and their code using the GitHub link
         below each one
       </p>
       {projects.map((project, idx) => {
         if (idx % 2 == 0)
-          return <FeaturedProject project={project} left={false} />;
-        else return <FeaturedProject project={project} left={true} />;
+          return <FeaturedProject key={idx} project={project} left={false} />;
+        else return <FeaturedProject key={idx} project={project} left={true} />;
       })}
       <div className="projects-button-container">
         <a href="/projects" className="btn btn-primary projects-button">

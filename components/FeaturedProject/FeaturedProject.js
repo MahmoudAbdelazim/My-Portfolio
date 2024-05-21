@@ -1,7 +1,11 @@
 const FeaturedProjectImage = ({ project }) => {
   return (
     <div className="featured-project-image">
-      <a className="featured-project-image-link" href={project.website ? project.website : project.githubLink} target="_blank">
+      <a
+        className="featured-project-image-link"
+        href={project.website ? project.website : project.githubLink}
+        target="_blank"
+      >
         <img src={project.imageLink} />
         <hr className="line" />
       </a>
@@ -19,8 +23,8 @@ const FeaturedProjectInfo = ({ project, left }) => {
       <h3 className="project-name">{project.name}</h3>
       <p className="project-desc">{project.desc}</p>
       <ul className="project-technologies">
-        {project.technologies.map((technology) => {
-          return <li className="project-technology green">{technology}</li>;
+        {project.technologies.map((technology, idx) => {
+          return <li key={idx} className="project-technology green">{technology}</li>;
         })}
       </ul>
       <p className="project-github-link">

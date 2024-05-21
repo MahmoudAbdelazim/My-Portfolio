@@ -17,7 +17,6 @@ const ProjectsPage = () => {
         if (data[0]) {
           data.sort((a, b) => (a.created_at > b.created_at ? -1 : 1));
           setProjects(data);
-          console.log(data);
           setIsLoading(false);
         }
       });
@@ -48,8 +47,8 @@ const ProjectsPage = () => {
             className="loading-gif"
             style={{ display: isLoading ? "inline-block" : "none" }}
           />
-          {projects.map((project) => {
-            return <Project project={project} />;
+          {projects.map((project, idx) => {
+            return <Project key={idx} project={project} />;
           })}
         </div>
       </div>

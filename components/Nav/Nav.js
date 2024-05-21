@@ -4,11 +4,11 @@ const Nav = () => {
       <div className="nav-toggler">
         <button
           type="button"
-          class="navbar-toggler"
+          className="navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
       </div>
       <div className="collapse navbar-collapse" id="navbarCollapse">

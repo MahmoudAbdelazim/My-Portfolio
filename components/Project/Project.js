@@ -4,8 +4,8 @@ const Project = ({ project }) => {
       <div className="project">
         <h3 className="project-name">{project.name}</h3>
         <p className="project-description">{project.description}</p>
-        {project.topics?.map((topic) => {
-          return <li className="project-topic">{topic}</li>;
+        {project.topics?.map((topic, idx) => {
+          return <li key={idx} className="project-topic">{topic}</li>;
         })}
         <p className="language-text">
           Main Language: <span className="language">{project.language}</span>

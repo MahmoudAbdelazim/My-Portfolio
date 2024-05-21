@@ -12,7 +12,7 @@ const Contact = () => {
     <div className="contact" id="contact">
       <h2 className="section-head">Get In Touch</h2>
       <p>
-        I'm currently open for new opportunities, whether you're hiring, you
+        I'm always open for new opportunities, whether you're hiring, you
         have a question or you just want to say hi, my inbox and my other
         communication channels are always open.
       </p>

@@ -12,18 +12,18 @@ const Work = ({ exp }) => {
           {exp.title}{" "}
           <span className="companyName">
             {" "}
-            <a className="companyLink" href={exp.companyLink}>
+            <a className="companyLink" href={exp.companyLink} target="_blank">
               @ {exp.companyName}
             </a>
           </span>
         </h3>
         <p className="date">
-          {exp.dateFrom} - {exp.dateTo} ({exp.duration})
+          {exp.dateFrom} - {exp.dateTo} {exp.duration ? `(${exp.duration})` : ""}
         </p>
         <ul className="responsibilities">
-          {exp.responsibilities.map((responsibility) => {
+          {exp.responsibilities.map((responsibility, idx) => {
             return (
-              <Responsibility resp={responsibility} />
+              <Responsibility key={idx} resp={responsibility} />
             )
           })}
         </ul>
