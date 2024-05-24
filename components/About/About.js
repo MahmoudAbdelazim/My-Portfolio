@@ -19,10 +19,33 @@ const About = () => {
         <div className="about-right">
           <p className="about-text" style={{ whiteSpace: "pre-line" }}>
             Hi! My name is Mahmoud Abdelazim, I'm a software development
-            engineer at Siemens Digital Industries Software, and a Bachelor's
-            degree holder in Computer Science from Cairo University in Egypt
-            with a grade of Excellent with honors, with internship experience at
-            Microsoft and IBM Egypt.
+            engineer at{" "}
+            <a
+              className="companyLink"
+              href={"https://www.sw.siemens.com/en-US/"}
+              target="_blank"
+            >
+              Siemens Digital Industries Software
+            </a>
+            , and a Bachelor's degree holder in Computer Science from Cairo
+            University in Egypt with a grade of Excellent with honors, with
+            internship experience at{" "}
+            <a
+              className="companyLink"
+              href={"https://www.microsoft.com/"}
+              target="_blank"
+            >
+              Microsoft
+            </a>{" "}
+            and{" "}
+            <a
+              className="companyLink"
+              href={"https://www.ibm.com/"}
+              target="_blank"
+            >
+              IBM
+            </a>
+            .
             <br /> <br />
             I'm a web enthusiast skilled in full-stack development who has
             worked with many different technologies, and I'm always passionate
