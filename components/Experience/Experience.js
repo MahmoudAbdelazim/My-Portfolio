@@ -1,21 +1,26 @@
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import Work from "../Work/Work";
 
 const Experience = () => {
   const [experience, setExperience] = useState([]);
 
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
   useEffect(() => {
     let exp = [
-      {
-        companyName: "Siemens Digital Industries Software",
-        companyLink: "https://www.sw.siemens.com/en-US/",
-        title: "Software Development Engineer",
-        dateFrom: "Jun 2024",
-        dateTo: "Present",
-        responsibilities: [
-          "Working as a full-stack engineer for Brightly Software team at Siemens Digital Industries Software. ",
-        ],
-      },
+      // {
+      //   companyName: "Siemens Digital Industries Software",
+      //   companyLink: "https://www.sw.siemens.com/en-US/",
+      //   title: "Software Development Engineer",
+      //   dateFrom: "Jun 2024",
+      //   dateTo: "Present",
+      //   responsibilities: [
+      //     "Working as a full-stack engineer for Brightly Software team at Siemens Digital Industries Software. ",
+      //   ],
+      // },
       {
         companyName: "Wind Integrated Solutions",
         companyLink: "https://wind-is.com/",
@@ -39,7 +44,7 @@ const Experience = () => {
           "Worked on three technical projects during my one-year mandatory military service at the military judiciary authority:",
           "Developed a web application from scratch for handling security gates check-in by extracting visitors' information from their scanned national IDs (OCR) and authorizing their check-ins. Used Node.js, React.js, Tesseract Engine, Flask and Sequelize.",
           "Contributed to development of a digital investigation system that allows case-tracking, questions-answers registering and automated report generation. Used Node.js, React.js and Sequelize.",
-          "Contributed to development and maintenance of a web app for handling faxes distribution, and archiving and sending documents across different departments in the authority. Used Python, Django, JavaScript, and SQLite. "
+          "Contributed to development and maintenance of a web app for handling faxes distribution, and archiving and sending documents across different departments in the authority. Used Python, Django, JavaScript, and SQLite. ",
         ],
       },
       {
@@ -76,13 +81,31 @@ const Experience = () => {
     setExperience(exp);
   }, []);
 
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, marginTop: 0, transition: { duration: 1.5 } },
+    hidden: { opacity: 0.5, marginTop: "100px" },
+  };
+
   return (
-    <div className="experience" id="experience">
+    <motion.div
+      className="experience"
+      id="experience"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
       <h2 className="section-head">Where I've Worked</h2>
       {experience.map((exp, idx) => {
         return <Work key={idx} exp={exp} />;
       })}
-    </div>
+    </motion.div>
   );
 };
 

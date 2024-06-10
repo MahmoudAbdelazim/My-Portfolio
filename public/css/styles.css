@@ -1,5 +1,6 @@
-html {
+html, body {
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 body {
@@ -123,7 +124,9 @@ ul.right {
   color: rgba(204, 235, 255, 0.697);
 }
 
-.get-in-touch-button, .projects-button, .go-back-button {
+.get-in-touch-button,
+.projects-button,
+.go-back-button {
   background-color: transparent;
   padding: 10px 40px;
   margin-top: 20px;
@@ -332,7 +335,7 @@ ul.right {
 
 .contact {
   padding: 0 15%;
-  margin-top: 150px;
+  margin-top: 300px;
   margin-bottom: 150px;
 }
 
@@ -397,7 +400,8 @@ ul.right {
   color: #64ffdb;
 }
 
-.project-link, .project-link:hover {
+.project-link,
+.project-link:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -536,7 +540,7 @@ ul.right {
   }
   .featured-project-image img {
     height: 170px;
-    opacity: 1.0;
+    opacity: 1;
   }
   .contact p {
     padding: 0 5%;
@@ -549,5 +553,5 @@ ul.right {
 
   .section-desc {
     text-align: center;
-  } 
+  }
 }

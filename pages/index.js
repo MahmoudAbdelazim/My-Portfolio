@@ -7,7 +7,7 @@ import Nav from "../components/Nav/Nav";
 
 const IndexPage = () => {
   return (
-    <>
+    <div>
       <Nav />
       <Landing />
       <About />
@@ -18,7 +18,7 @@ const IndexPage = () => {
       <hr className="section-line" />
       <Contact />
       <div className="footer">&copy; Built By Mahmoud Abdelazim</div>
-    </>
+    </div>
   );
 };
 

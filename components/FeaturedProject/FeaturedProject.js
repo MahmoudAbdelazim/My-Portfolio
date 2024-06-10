@@ -1,3 +1,7 @@
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 const FeaturedProjectImage = ({ project }) => {
   return (
     <div className="featured-project-image">
@@ -24,7 +28,11 @@ const FeaturedProjectInfo = ({ project, left }) => {
       <p className="project-desc">{project.desc}</p>
       <ul className="project-technologies">
         {project.technologies.map((technology, idx) => {
-          return <li key={idx} className="project-technology green">{technology}</li>;
+          return (
+            <li key={idx} className="project-technology green">
+              {technology}
+            </li>
+          );
         })}
       </ul>
       <p className="project-github-link">
@@ -44,8 +52,27 @@ const FeaturedProjectInfo = ({ project, left }) => {
 };
 
 const FeaturedProject = ({ project, left }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } 
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, marginTop: 0, transition: { duration: 1.5 } },
+    hidden: { opacity: 1, marginTop: "150px" },
+  };
   return (
-    <div className="featured-project-container">
+    <motion.div
+      className="featured-project-container"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
       {left ? (
         <div>
           <FeaturedProjectInfo project={project} left={left} />
@@ -57,7 +84,7 @@ const FeaturedProject = ({ project, left }) => {
           <FeaturedProjectInfo project={project} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

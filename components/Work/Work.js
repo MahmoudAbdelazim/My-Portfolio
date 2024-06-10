@@ -1,12 +1,33 @@
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 const Responsibility = ({ resp }) => {
-  return (
-    <li>{resp}</li>
-  )
+  return <li>{resp}</li>;
 };
 
 const Work = ({ exp }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, marginTop: 0, transition: { duration: 1.5 } },
+    hidden: { opacity: 0, marginTop: "50px" },
+  };
   return (
-    <div className="work">
+    <motion.div
+      className="work"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
       <div className="work-left">
         <h3>
           {exp.title}{" "}
@@ -18,17 +39,16 @@ const Work = ({ exp }) => {
           </span>
         </h3>
         <p className="date">
-          {exp.dateFrom} - {exp.dateTo} {exp.duration ? `(${exp.duration})` : ""}
+          {exp.dateFrom} - {exp.dateTo}{" "}
+          {exp.duration ? `(${exp.duration})` : ""}
         </p>
         <ul className="responsibilities">
           {exp.responsibilities.map((responsibility, idx) => {
-            return (
-              <Responsibility key={idx} resp={responsibility} />
-            )
+            return <Responsibility key={idx} resp={responsibility} />;
           })}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,13 @@
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import FeaturedProject from "../FeaturedProject/FeaturedProject";
 
 const FeaturedProjects = () => {
   const [projects, setProjects] = useState([]);
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     let proj = [
@@ -45,8 +50,26 @@ const FeaturedProjects = () => {
     setProjects(proj);
   }, []);
 
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: { opacity: 1, marginTop: 0, transition: { duration: 1 } },
+    hidden: { opacity: 0.5, marginTop: "100px" },
+  };
+
   return (
-    <div className="featured-projects" id="projects">
+    <motion.div
+      className="featured-projects"
+      id="projects"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
       <h2 className="section-head">Featued Projects</h2>
       <p className="section-desc">
         These are the most interesting side projects I've worked on.
@@ -63,7 +86,7 @@ const FeaturedProjects = () => {
           View All Projects
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
