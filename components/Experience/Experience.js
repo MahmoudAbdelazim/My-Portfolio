@@ -11,16 +11,16 @@ const Experience = () => {
 
   useEffect(() => {
     let exp = [
-      // {
-      //   companyName: "Siemens Digital Industries Software",
-      //   companyLink: "https://www.sw.siemens.com/en-US/",
-      //   title: "Software Development Engineer",
-      //   dateFrom: "Jun 2024",
-      //   dateTo: "Present",
-      //   responsibilities: [
-      //     "Working as a full-stack engineer for Brightly Software team at Siemens Digital Industries Software. ",
-      //   ],
-      // },
+      {
+        companyName: "Siemens Digital Industries Software",
+        companyLink: "https://www.sw.siemens.com/en-US/",
+        title: "Software Development Engineer",
+        dateFrom: "Jun 2024",
+        dateTo: "Present",
+        responsibilities: [
+          "Working as a full-stack engineer for Brightly Software team at Siemens Digital Industries Software. ",
+        ],
+      },
       {
         companyName: "Wind Integrated Solutions",
         companyLink: "https://wind-is.com/",

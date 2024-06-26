@@ -45,14 +45,14 @@ const About = () => {
           <p className="about-text" style={{ whiteSpace: "pre-line" }}>
             Hi! My name is Mahmoud Abdelazim, I'm a software development
             engineer
-            {/* at{" "}
+            at{" "}
             <a
               className="companyLink"
               href={"https://www.sw.siemens.com/en-US/"}
               target="_blank"
             >
               Siemens Digital Industries Software
-            </a> */}
+            </a>
             , and a Bachelor's degree holder in Computer Science from Cairo
             University in Egypt with a grade of Excellent with honors, with
             internship experience at{" "}
